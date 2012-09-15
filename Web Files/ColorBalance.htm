@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+	<head>
+		<title>~appName~ - Color Balance</title>
+		<meta http-equiv="pragma" content="no-cache" />
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+		<link href="AppStyles.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<form action="ColorBalance.htm" method="post">
+			<div class="page">
+				<div class="header">
+					<div class="headerTitle">~appName~</div>
+				</div>
+				<div class="tabsDiv">
+					<ul class='tabs'>
+						<li class="active"><a href="ColorBalance.htm">Color Balance</a></li>
+					</ul>
+					<div class="tabPage">
+						<fieldset>
+							<legend>Current Balance</legend>
+							<div style="padding-top:4px;padding-bottom:8px;padding-left:8px;padding-right:8px;">
+								<table border="0" cellpadding="2" cellspacing="0" >
+									<tr><td class="label">White:</td><td>~whiteNow~</td></tr>
+									<tr><td class="label">Blue:</td><td>~blueNow~</td></tr>
+									<tr><td class="label">Violet:</td><td>~violetNow~</td></tr>
+								</table>
+							</div>
+						</fieldset>
+						<div class="buttonBar">
+						<input name="resetWhite" type="submit" value="Reset White" class="button"/>
+						<input name="resetBlue" type="submit" value="Reset Blue" class="button"/>
+						<input name="resetViolet" type="submit" value="Reset Violet" class="button"/>
+						</div>
+						<div class="buttonBar">
+						<input name="w+1" type="submit" value="+1" class="sbutton"/>
+						<input name="w-1" type="submit" value="-1" class="sbutton"/>
+						<input name="b+1" type="submit" value="+1" class="sbutton"/>
+						<input name="b-1" type="submit" value="-1" class="sbutton"/>
+						<input name="v+1" type="submit" value="+1" class="sbutton"/>
+						<input name="v-1" type="submit" value="-1" class="sbutton"/>
+						</div>
+						<div class="buttonBar">
+						<input name="w+5" type="submit" value="+5" class="sbutton"/>
+						<input name="w-5" type="submit" value="-5" class="sbutton"/>
+						<input name="b+5" type="submit" value="+5" class="sbutton"/>
+						<input name="b-5" type="submit" value="-5" class="sbutton"/>
+						<input name="v+5" type="submit" value="+5" class="sbutton"/>
+						<input name="v-5" type="submit" value="-5" class="sbutton"/>
+						</div>
+						<div class="buttonBar">
+						<input name="w+10" type="submit" value="+10" class="sbutton"/>
+						<input name="w-10" type="submit" value="-10" class="sbutton"/>
+						<input name="b+10" type="submit" value="+10" class="sbutton"/>
+						<input name="b-10" type="submit" value="-10" class="sbutton"/>
+						<input name="v+10" type="submit" value="+10" class="sbutton"/>
+						<input name="v-10" type="submit" value="-10" class="sbutton"/>
+						</div>
+						<div class="buttonBar">
+						<input name="w+25" type="submit" value="+25" class="sbutton"/>
+						<input name="w-25" type="submit" value="-25" class="sbutton"/>
+						<input name="b+25" type="submit" value="+25" class="sbutton"/>
+						<input name="b-25" type="submit" value="-25" class="sbutton"/>
+						<input name="v+25" type="submit" value="+25" class="sbutton"/>
+						<input name="v-25" type="submit" value="-25" class="sbutton"/>
+						</div>
+						<div class="buttonBar">
+						<input name="exit" type="submit" value="Exit Test Mode" class="button"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>
+

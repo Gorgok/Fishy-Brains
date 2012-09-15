@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+	<head>
+		<title>~appName~ - Tank Status</title>
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta http-equiv="refresh" content="30" />
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+		<link href="AppStyles.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript">
+			function confirmFeed()
+			{
+				return confirm("Entering feed mode. Pumps will resume in 15 minutes.\n\nClick OK to continue.\n\n");
+			}
+			function confirmResetT()
+			{
+				return confirm("Resetting temperature history.\n\nClick OK to continue.\n\n");
+			}
+			function confirmResetPH()
+			{
+				return confirm("Resetting PH history.\n\nClick OK to continue.\n\n");
+			}
+		</script>
+	</head>
+	<body>
+		<form action="TankStatus.htm" method="post">
+			<div class="page">
+				<div class="header">
+					<div class="headerTitle">~appName~</div>
+				</div>
+				<div class="tabsDiv">
+					<ul class='tabs'>
+						<li class="active"><a href="TankStatus.htm">Status</a></li>
+						<li><a href="TankSettings.htm">Settings</a></li>
+						<li><a href="TankTimers.htm">Timers</a></li>
+						<li><a href="Device.htm">Device</a></li>
+						<li><a href="Settings.htm">Network Settings</a></li>
+					</ul>
+					<div class="tabPage">
+						<fieldset>
+							<legend>Current Status</legend>
+							<div style="padding-top:4px;padding-bottom:8px;padding-left:8px;padding-right:8px;">
+								<table border="0" cellpadding="2" cellspacing="0" >
+									<tr><td class="label">Time:</td><td>~dateTime~</td></tr>
+									<tr><td class="label">Tank Temp:</td><td>~tankNow~</td></tr>
+									<tr><td class="label">Sump Temp:</td><td>~sumpNow~</td></tr>
+									<tr><td class="label">PH:</td><td>~phNow~</td></tr>
+								</table>
+							</div>
+						</fieldset>
+						<div class="buttonBar">
+						<input name="feed" type="submit" value="Feed Mode" class="button" onclick="return confirmFeed();"/>
+						</div>
+						<fieldset style="margin-top: 8px;">
+							<legend>Temperature History</legend>
+							<div style="padding-top:4px;padding-bottom:8px;padding-left:8px;padding-right:8px;">
+								<table border="0" cellpadding="2" cellspacing="0" >
+									<tr><td class="label">Tanks High:</td><td>~tankHighT~</td></tr>
+									<tr><td class="label">Tank Low:</td><td>~tankLowT~</td></tr>
+									<tr><td class="label">Sump High:</td><td>~sumpHighT~</td></tr>
+									<tr><td class="label">Sump Low:</td><td>~sumpLowT~</td></tr>
+								</table>
+							</div>
+						</fieldset>
+						<fieldset style="margin-top: 8px;">
+							<legend>PH History</legend>
+							<div style="padding-top:4px;padding-bottom:8px;padding-left:8px;padding-right:8px;">
+								<table border="0" cellpadding="2" cellspacing="0" >
+									<tr><td class="label">PH High:</td><td>~highPH~</td></tr>
+									<tr><td class="label">PH Low:</td><td>~lowPH~</td></tr>
+								</table>
+							</div>
+						</fieldset>
+						<div class="buttonBar">
+							<input name="resetT" type="submit" value="Reset Temps" class="button" onclick="return confirmResetT();"/>
+							<input name="resetPH" type="submit" value="Reset PH" class="button" onclick="return confirmResetPH();"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>
+

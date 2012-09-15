@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>~appName~ - Tank Settings</title>
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="refresh" content="30" />
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+<link href="AppStyles.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">function cT(){return confirm("Entering color testing mode. Programs going idle.\n\nClick OK to continue.\n\n")};</script>
+</head>
+<body>
+<form action="TankSettings.htm" method="post">
+<div class="p">
+<div class="h">
+<div class="hT">~appName~</div>
+</div>
+<div class="tD">
+<ul class='t'>
+<li><a href="TankStatus.htm">Status</a></li>
+<li class="a"><a href="TankSettings.htm">Settings</a></li>
+<li><a href="TankTimers.htm">Timers</a></li>
+<li><a href="Device.htm">Device</a></li>
+<li><a href="Settings.htm">Network Settings</a></li>
+</ul>
+<div class="tP">
+<fieldset>
+<legend>Programs</legend>
+<div style="padding-top:4px;padding-bottom:8px;padding-left:8px;padding-right:8px">
+<table border="0" cellpadding="2" cellspacing="0">
+<tr><td class="l">Measure Temp:</td><td>~rTemp~</td></tr>
+<tr><td class="l">Measure PH:</td><td>~rPH~</td></tr>
+<tr><td class="l">Run Timers:</td><td>~rTimer~</td></tr>
+</table>
+</div>
+</fieldset>
+<div class="bB">
+<input name="rTemp" type="submit" value="Measure Temp" class="b"/>
+<input name="rPH" type="submit" value="Measure PH" class="b"/>
+</div>
+<div class="bB">
+<input name="rTimer" type="submit" value="Run Timers" class="b"/>
+<input name="test" type="submit" value="Test Mode" class="b" onclick="return cT()"/>
+</div>
+<fieldset style="margin-top:8px">
+<legend>Pumps</legend>
+<div style="padding-top:4px;padding-bottom:8px;padding-left:8px;padding-right:8px">
+<table border="0" cellpadding="2" cellspacing="0">
+<tr><td class="l">Main Pump:</td><td>~mPump~</td></tr>
+<tr><td class="l">Sump Pump:</td><td>~sPump~</td></tr>
+<tr><td class="l">Flow Pumps:</td><td>~fPump~</td></tr>
+</table>
+</div>
+</fieldset>
+<div class="bB">
+<input name="mPump" type="submit" value="Main Pump" class="b"/>
+<input name="sPump" type="submit" value="Sump Pump" class="b"/>
+<input name="fPump" type="submit" value="Flow Pump" class="b"/>
+</div>
+</div>
+</div>
+</div>
+</form>
+</b>
+</html>

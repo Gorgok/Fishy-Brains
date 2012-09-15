@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>~appName~ - Tank Timers</title>
+<meta http-equiv="pragma" content="no-cache" />
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+<link href="AppStyles.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">function showMsg(a){if(a.length>0){alert(a)}}function cR(){return confirm("Click OK to save settings.\n\n")};</script>
+</head>
+<body onload="showMsg('~msg~')">
+<form action="TankTimers.htm" method="post">
+<div class="p">
+<div class="h">
+<div class="hT">~appName~</div>
+</div>
+<div class="tD">
+<ul class='t'>
+<li><a href="TankStatus.htm">Status</a></li>
+<li><a href="TankSettings.htm">Settings</a></li>
+<li class="a"><a href="TankTimers.htm">Timers</a></li>
+<li><a href="Device.htm">Device</a></li>
+<li><a href="Settings.htm">Network Settings</a></li>
+</ul>
+<div class="tP">
+<fieldset>
+<legend>White Lights</legend>
+<div style="padding-top:4px;padding-bottom:8px;padding-left:8px;padding-right:8px">
+<table border="0" cellpadding="2" cellspacing="0">
+<tr><td class="l">Start Time:</td><td><input name="wStartH" type="text" class="tB4" value="~wStartH~" maxlength="2" /></td>
+<td class="s">:</td><td><input name="wStartM" type="text" class="tB4" value="~wStartM~" maxlength="2" /></td></tr>
+<tr><td class="l">End Time:</td><td><input name="wEndH" type="text" class="tB4" value="~wEndH~" maxlength="2" /></td>
+<td class="s">:</td><td><input name="wEndM" type="text" class="tB4" value="~wEndM~" maxlength="2" /></td></tr>
+<tr><td class="l">White Intensity:</td><td><input name="wMax" type="text" class="tB4" value="~wMax~" maxlength="3" /></td></tr>
+<tr><td class="l">Ramp Duration:</td><td><input name="wRamp" type="text" class="tB4" value="~wRamp~" maxlength="3" /></td></tr>
+</table>
+</div>
+</fieldset>
+<fieldset style="margin-top:8px">
+<legend>Blue Lights</legend>
+<div style="padding-top:4px;padding-bottom:8px;padding-left:8px;padding-right:8px">
+<table border="0" cellpadding="2" cellspacing="0">
+<tr><td class="l">Start Time:</td><td><input name="bStartH" type="text" class="tB4" value="~bStartH~" maxlength="2" /></td>
+<td class="s">:</td><td><input name="bStartM" type="text" class="tB4" value="~bStartM~" maxlength="2" /></td></tr>
+<tr><td class="l">End Time:</td><td><input name="bEndH" type="text" class="tB4" value="~bEndH~" maxlength="2" /></td>
+<td class="s">:</td><td><input name="bEndM" type="text" class="tB4" value="~bEndM~" maxlength="2" /></td></tr>
+<tr><td class="l">Blue Intensity:</td><td><input name="bMax1" type="text" class="tB4" value="~bMax1~" maxlength="3" /></td></tr>
+<tr><td class="l">Violet Intensity:</td><td><input name="bMax2" type="text" class="tB4" value="~bMax2~" maxlength="3" /></td></tr>
+<tr><td class="l">Ramp Duration:</td><td><input name="bRamp" type="text" class="tB4" value="~bRamp~" maxlength="3" /></td></tr>
+</table>
+</div>
+</fieldset>
+<fieldset style="margin-top:8px">
+<legend>Scrubber Lights</legend>
+<div style="padding-top:4px;padding-bottom:8px;padding-left:8px;padding-right:8px">
+<table border="0" cellpadding="2" cellspacing="0">
+<tr><td class="l">Start Time:</td><td><input name="rStartH" type="text" class="tB4" value="~rStartH~" maxlength="2" /></td>
+<td class="s">:</td><td><input name="rStartM" type="text" class="tB4" value="~rStartM~" maxlength="2" /></td></tr>
+<tr><td class="l">End Time:</td><td><input name="rEndH" type="text" class="tB4" value="~rEndH~" maxlength="2" /></td>
+<td class="s">:</td><td><input name="rEndM" type="text" class="tB4" value="~rEndM~" maxlength="2" /></td></tr>
+</table>
+</div>
+</fieldset>
+<fieldset style="margin-top:8px">
+<legend>Password</legend>
+<div style="padding-top:4px;padding-bottom:8px;padding-left:8px;padding-right:8px">
+<table border="0" cellpadding="2" cellspacing="0">
+<tr><td class="l">Password:</td><td><input name="pwd" type="password" class="tB8" value="~pwd~" maxlength="10" /></td></tr>
+</table>
+</div>
+</fieldset>
+<div class="bB">
+<input name="save" type="submit" value="Save Settings" class="b" onclick="return cR()" />
+</div>
+</div>
+</div>
+</div>
+</form>
+</body>
+</html>

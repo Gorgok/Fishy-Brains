@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+	<head>
+		<title>~appName~ - Network Settings</title>
+		<meta http-equiv="pragma" content="no-cache" />
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+		<link href="AppStyles.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript">
+			function showMsg(msg)
+			{
+				if (msg.length > 0)
+					alert(msg);
+			}
+			function confirmReboot()
+			{
+				return confirm("If you click OK, your changes will be saved and the device will restart.\n\nClick OK to continue.\n\n");
+			}
+		</script>
+	</head>
+	<body onload="showMsg('~msg~');">
+		<form action="Settings.htm" method="post">
+			<div class="page">
+				<div class="header">
+					<div class="headerTitle">~appName~</div>
+				</div>
+				<div class="tabsDiv">
+					<ul class='tabs'>
+						<li><a href="TankStatus.htm">Status</a></li>
+						<li><a href="TankSettings.htm">Settings</a></li>
+						<li><a href="TankTimers.htm">Timers</a></li>
+						<li><a href="Device.htm">Device</a></li>
+						<li class="active"><a href="Settings.htm">Network Settings</a></li>
+					</ul>
+					<div class="tabPage">
+						<fieldset>
+							<legend>General</legend>
+							<div style="padding-top:4px;padding-bottom:8px;padding-left:8px;padding-right:8px;">
+								<table border="0" cellpadding="2" cellspacing="0" >
+									<tr><td class="label">Host Name:</td><td><input name="host" type="text" class="textBox80" value="~host~" maxlength="15" /></td></tr>
+									<tr><td class="label">MAC Address:</td><td><input name="mac" type="text" class="textBox100" value="~mac~" maxlength="17" /></td></tr>
+								</table>
+							</div>
+						</fieldset>
+						<fieldset style="margin-top: 8px;">
+							<legend>DHCP</legend>
+							<div style="padding-top:4px;padding-bottom:8px;padding-left:8px;padding-right:8px;">
+								<table border="0" cellpadding="2" cellspacing="0" >
+									<tr><td class="label">DHCP Enabled:</td><td><input name="dhcpEnabled" type="checkbox" class="checkBox" ~dhcpEnabled~ /></td></tr>
+									<tr><td class="label">IP Address:</td><td><input name="ip" type="text" class="textBox80" value="~ip~" maxlength="17" /></td></tr>
+									<tr><td class="label">IP Mask:</td><td><input name="mask" type="text" class="textBox80" value="~mask~" maxlength="17" /></td></tr>
+									<tr><td class="label">IP Gateway:</td><td><input name="gateway" type="text" class="textBox80" value="~gateway~" maxlength="17" /></td></tr>
+									<tr><td class="label">DNS Address:</td><td><input name="dns" type="text" class="textBox80" value="~dns~" maxlength="17" /></td></tr>
+								</table>
+							</div>
+						</fieldset>
+						<fieldset style="margin-top: 8px;">
+							<legend>NTP</legend>
+							<div style="padding-top:4px;padding-bottom:8px;padding-left:8px;padding-right:8px;">
+								<table border="0" cellpadding="2" cellspacing="0" >
+									<tr><td class="label">NTP Enabled:</td><td><input name="ntpEnabled" type="checkbox" class="checkBox" ~ntpEnabled~ /></td></tr>
+									<tr><td class="label">NTP Server:</td><td><input name="ntpServer" type="text" class="textBox150" value="~ntpServer~" maxlength="50" /></td></tr>
+									<tr><td class="label">NTP Offset:</td><td><input name="ntpOffset" type="text" class="textBox40" value="~ntpOffset~" maxlength="5" /></td></tr>
+								</table>
+							</div>
+						</fieldset>
+						<fieldset style="margin-top: 8px;">
+							<legend>HTTP</legend>
+							<div style="padding-top:4px;padding-bottom:8px;padding-left:8px;padding-right:8px;">
+								<table border="0" cellpadding="2" cellspacing="0" >
+									<tr><td class="label">HTTP Enabled:</td><td><input name="httpEnabled" type="checkbox" class="checkBox" ~httpEnabled~ /></td></tr>
+									<tr><td class="label">HTTP Port:</td><td><input name="httpPort" type="text" class="textBox40" value="~httpPort~" maxlength="6" /></td></tr>
+								</table>
+							</div>
+						</fieldset>
+						<fieldset style="margin-top: 8px;">
+							<legend>Password</legend>
+							<div style="padding-top:4px;padding-bottom:8px;padding-left:8px;padding-right:8px;">
+								<table border="0" cellpadding="2" cellspacing="0" >
+									<tr><td class="label">Password:</td><td><input name="pwd" type="password" class="textBox80" value="~pwd~" maxlength="10" /></td></tr>
+									<tr><td class="label">New Password:</td><td><input name="npwd" type="password" class="textBox80" value="~npwd~" maxlength="10" />&nbsp;(optional)</td></tr>
+								</table>
+							</div>
+						</fieldset>
+						<div class="buttonBar">
+							<input name="save" type="submit" value="Save Settings" class="button" onclick="return confirmReboot();" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>
+
